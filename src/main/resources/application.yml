@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/projectv1
+    username: ismannr
+    password: Ismanganteng1
+#    username: postgres
+#    password: novan123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update #everytime the apps started it will create schema and drop when the app closed
+    show-sql: true #everytime query is perform it will show the query
+    properties:
+      hibernate:
+        format_sql: true #formating sql
+    database: postgresql  #telling which database that used
+    database-platform: org.hibernate.dialect.PostgreSQLDialect #let spring help write queries
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
